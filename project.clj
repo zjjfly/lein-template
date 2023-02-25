@@ -8,11 +8,16 @@
   :main ^:skip-aot com.github.zjjfly.core
   :plugins [[lein-cljfmt "0.8.2"]
             [lein-junit "1.1.9"]]
+  ;compile some namespaces ahead of time
+  ;:aot [com.github.zjjfly.core]
+  ;compile some clojure namespace before compiling java
+  ;:prep-tasks [["compile" "xxx.yyy.zzz"]
+  ;             "javac" "compile"]
   :target-path "target/%s"
   :global-vars {*warn-on-reflection* true}
   :source-paths ["src/main/clj"]
   :java-source-paths ["src/main/java" "src/test/java"]
-  :javac-options ["-target" "1.8" "-source" "1.8" "-encoding" "utf8" "-Xlint:-options"]
+  :javac-options ["-target" "17" "-source" "17" "-encoding" "utf8" "-Xlint:-options"]
   :resource-paths ["src/main/resources"]
   :test-paths ["src/test/clj"]
   :junit ["src/test/java"]
