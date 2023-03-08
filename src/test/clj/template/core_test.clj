@@ -1,4 +1,4 @@
-(ns com.github.zjjfly.core
+(ns template.core_test
   (:require [clojure.test :refer :all]))
 
 (deftest foo

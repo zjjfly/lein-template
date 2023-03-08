@@ -1,4 +1,4 @@
-(ns com.github.zjjfly.core
+(ns template.core
   (:gen-class))
 
 (defn -main
